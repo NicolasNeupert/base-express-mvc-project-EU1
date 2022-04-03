@@ -9,10 +9,8 @@ const pageController = new PageController()
 const calculateRateController = new CalculateRateController()
 
 // Routes
-router.get('/', pageController.renderHome)
-
-router.get('/calculate-rate-form', calculateRateController.renderCalculateRateForm)
-router.post('/calculate-rate-form', calculateRateController.renderRateValueTotal)
+router.get('/', calculateRateController.renderCalculateRateForm)
+router.post('/', calculateRateController.renderRateValueTotal)
 
 router.get('*', pageController.renderNotFound)
 
